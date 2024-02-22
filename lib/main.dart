@@ -77,7 +77,7 @@ class _UserListPageState extends State<UserListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test Users'),
+        title: const Text('REST API'),
         centerTitle: true,
         actions: [
           IconButton(
