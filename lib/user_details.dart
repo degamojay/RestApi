@@ -23,8 +23,17 @@ class UserDetailsPage extends StatelessWidget {
     String bs = company['bs'];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Test User Details'),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60.0),
+        child: AppBar(
+          title: const Text('Test User Details'),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_rounded),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
