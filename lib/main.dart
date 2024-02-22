@@ -44,7 +44,7 @@ class _UserListPageState extends State<UserListPage> {
         users = json.decode(response.body);
       });
     } else {
-      throw Exception('Failed to load users');
+      throw Exception('Error: Failed to load users');
     }
   }
 
@@ -62,6 +62,7 @@ class _UserListPageState extends State<UserListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Test Users'),
+        centerTitle: true,
       ),
       body: UserList(
         users: users,

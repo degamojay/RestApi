@@ -12,6 +12,10 @@ class UserList extends StatelessWidget {
       itemCount: users.length,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
+          leading: const CircleAvatar(
+            // You can replace the placeholder icon with the actual user profile image
+            child: Icon(Icons.person),
+          ),
           title: Text(
             users[index]['name'],
             style: const TextStyle(
