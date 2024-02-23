@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/user_models.dart';
+import 'user_models.dart';
 
 class UserDetailsPage extends StatelessWidget {
   final UserModel user;
