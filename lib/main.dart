@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'models/user_models.dart';
-import 'user_details.dart';
+import 'models/user_details.dart';
 
 void main() {
   runApp(const MyApp());

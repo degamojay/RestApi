@@ -19,7 +19,6 @@ class UserDetailsPage extends StatelessWidget {
           children: [
             Text(
               'Name: ${user.name}',
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text('Username: ${user.username}'),
@@ -32,14 +31,12 @@ class UserDetailsPage extends StatelessWidget {
             const SizedBox(height: 8),
             const Text(
               'Address:',
-              style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text('${user.address.street}, ${user.address.suite}'),
             Text('${user.address.city}, ${user.address.zipcode}'),
             const SizedBox(height: 8),
             const Text(
               'Company:',
-              style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text(user.company.name),
             Text(user.company.catchPhrase),
