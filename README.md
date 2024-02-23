@@ -34,6 +34,4 @@ In this project, we are implementing a REST API using [Mockoon](https://mockoon.
 
 7. **Deployment**: Once the application development is complete and tested with Mockoon, you can deploy it to production with confidence, knowing that it has been thoroughly tested with realistic data.
 
-By following these steps, you can effectively implement a REST API using Mockoon and Faker data, streamlining the development and testing process of your application.
-
-Feel free to customize and expand upon this outline to provide more details specific to your project and requirements!
+Happy testing...
