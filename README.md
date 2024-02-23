@@ -1,16 +1,12 @@
 # activity2
 
-A new Flutter project.
-
+Hello welcome to my activity2 
 ## Getting Started
+Run:
+- flutter pub get
 
-This project is a starting point for a Flutter application.
+If problem occurs possible fixes:
+- flutter clean
+- flutter pub get 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In this project, we are implementing a REST API using Mockoon and Faker data. This setup allows us to create a mock server with realistic fake data for testing purposes. 
