@@ -43,7 +43,7 @@ class _UserListPageState extends State<UserListPage> {
 
   Future<List<UserModel>> fetchUsers() async {
     final response =
-        await http.get(Uri.parse("http://192.168.1.190:3001/users"));
+        await http.get(Uri.parse("http://192.168.1.189:3001/users"));
 
     if (response.statusCode == 200) {
       List<dynamic> jsonResponse = json.decode(response.body);

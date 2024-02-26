@@ -17,7 +17,13 @@ class _ToDoListPageState extends State<ToDoListPage> {
   @override
   void initState() {
     super.initState();
-    _fetchToDoItems();
+    // Check if data is already fetched
+    if (_toDoItems.isEmpty) {
+      _fetchToDoItems();
+    } else {
+      // Data already fetched, no need to fetch again
+      _isLoading = false;
+    }
   }
 
   Future<void> _fetchToDoItems() async {
@@ -26,7 +32,6 @@ class _ToDoListPageState extends State<ToDoListPage> {
       if (response.statusCode == 200) {
         final responseBody = json.decode(response.body);
         if (responseBody is Map<String, dynamic> && responseBody['tasks'] is List) {
-          // Adjusted to match your JSON structure with a "tasks" field
           final List<dynamic> toDoItemsJson = responseBody['tasks'];
           setState(() {
             _toDoItems = toDoItemsJson.map((jsonItem) => ToDoItem.fromJson(jsonItem)).toList();
@@ -79,7 +84,7 @@ class _ToDoListPageState extends State<ToDoListPage> {
           return ListTile(
             leading: Checkbox(
               value: item.isCompleted,
-              onChanged: null, // Makes the checkbox visually reflect the state without being interactive
+              onChanged: null,
             ),
             title: Text(item.title),
           );
@@ -90,7 +95,7 @@ class _ToDoListPageState extends State<ToDoListPage> {
 }
 
 class ToDoItem {
-  final String id; // Changed to String to accommodate UUIDs
+  final String id;
   final String title;
   bool isCompleted;
 
@@ -98,7 +103,7 @@ class ToDoItem {
 
   factory ToDoItem.fromJson(Map<String, dynamic> json) {
     return ToDoItem(
-      id: json['id'], // Directly use the string ID
+      id: json['id'],
       title: json['title'],
       isCompleted: json['completed'] ?? false,
     );
